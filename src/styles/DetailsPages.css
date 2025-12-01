@@ -1,0 +1,316 @@
+/* ===========================
+   AstroVerse - Details Pages CSS
+   =========================== */
+
+.astrology-details-page {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.details-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.btn-back {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 0.8rem 1.5rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-back:hover {
+  background: var(--primary);
+  color: white;
+  transform: translateX(-5px);
+}
+
+.details-header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.details-header .profile-name {
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+}
+
+.detail-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--soft-radius);
+  padding: 2rem;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+}
+
+.detail-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(99, 102, 241, 0.25);
+}
+
+.detail-card.full-width {
+  grid-column: 1 / -1;
+}
+
+.detail-card-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--border);
+}
+
+.detail-card-header h2 {
+  font-size: 1.6rem;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.detail-card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem;
+  background: rgba(99, 102, 241, 0.05);
+  border-radius: 8px;
+}
+
+.detail-item.highlight {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(139, 92, 246, 0.15));
+  border: 1px solid var(--primary);
+  padding: 1.2rem;
+}
+
+.detail-item .label {
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.detail-item .value {
+  color: var(--text);
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.number-big {
+  font-size: 2.5rem !important;
+  color: var(--primary) !important;
+}
+
+.detail-description {
+  line-height: 1.8;
+}
+
+.detail-description h3 {
+  color: var(--primary);
+  font-size: 1.3rem;
+  margin: 1.5rem 0 0.8rem;
+}
+
+.detail-description p {
+  color: var(--muted);
+  margin-bottom: 1rem;
+  line-height: 1.8;
+}
+
+.detail-description ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0;
+}
+
+.detail-description ul li {
+  padding: 0.6rem 0 0.6rem 1.8rem;
+  position: relative;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.detail-description ul li::before {
+  content: "✨";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+}
+
+.detail-description strong {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.yoga-grid,
+.big-three-analysis,
+.number-synthesis,
+.compatibility-grid,
+.career-grid {
+  display: grid;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.yoga-item,
+.compatibility-section,
+.career-section {
+  background: rgba(99, 102, 241, 0.05);
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.yoga-item h3,
+.compatibility-section h3,
+.career-section h3 {
+  color: var(--primary);
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.yoga-item p,
+.compatibility-section p,
+.career-section p {
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 0.8rem;
+}
+
+.yoga-item ul,
+.compatibility-section ul,
+.career-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.yoga-item ul li,
+.compatibility-section ul li,
+.career-section ul li {
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  position: relative;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.yoga-item ul li::before,
+.compatibility-section ul li::before,
+.career-section ul li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+.big-three-analysis h3,
+.number-synthesis h3 {
+  color: var(--primary);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+.big-three-analysis p,
+.number-synthesis p {
+  color: var(--muted);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.big-three-analysis ul,
+.number-synthesis ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.big-three-analysis ul li,
+.number-synthesis ul li {
+  padding: 0.6rem 0 0.6rem 1.8rem;
+  position: relative;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.big-three-analysis ul li::before,
+.number-synthesis ul li::before {
+  content: "⭐";
+  position: absolute;
+  left: 0;
+  color: var(--primary);
+}
+
+@media (max-width: 768px) {
+  .astrology-details-page {
+    padding: 1rem;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn-back {
+    position: static;
+    display: block;
+    margin: 0 auto 1.5rem;
+    width: fit-content;
+  }
+
+  .details-header h1 {
+    font-size: 2rem;
+    margin-top: 1rem;
+  }
+
+  .detail-card {
+    padding: 1.5rem;
+  }
+
+  .detail-card-header h2 {
+    font-size: 1.4rem;
+  }
+
+  .detail-description h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .detail-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .number-big {
+    font-size: 2rem !important;
+  }
+
+  .details-header h1 {
+    font-size: 1.8rem;
+  }
+}
